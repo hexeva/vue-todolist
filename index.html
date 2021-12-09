@@ -31,7 +31,9 @@
                 <!-- items -->
                 <div class="list-of-items">
                     <ul>
-                        <li v-for="(element,index) in todo">{{element}}<span @click="clearToDo(index)"><i class="fas fa-trash-alt"></i></span></li>
+                        <li  
+                            v-for="(element,index) in todo"  :class="{'is-done':todo.done}">{{element.text}}<span @click="clearToDo(index)"><i class="fas fa-trash-alt"></i></span>
+                        </li>
                       
                     </ul>
                 </div>

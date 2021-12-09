@@ -14,12 +14,35 @@ const app = new Vue ({
     el:'#root',
     data:{
         todo:[
-            'fare la spesa',
-            'comprare il caffè',
-            'aiutare la nonna',
-            'buttare la zozzeria',
-            
-            
+           {
+               text:'buttare la spazzatura',
+               done:true,
+           },
+
+           {
+            text:'portare fuori il cane',
+            done:false,
+            },
+
+            {
+            text:'comprare il giornale',
+            done:false,
+            },
+
+            {
+            text:'fare i compiti',
+            done:false,
+            },
+
+            {
+            text:'comprare il il caffè',
+            done:false,
+            },
+
+            {
+            text:'preparare la cena',
+            done:false,
+            },  
         ],
         whatToDo:'',
 
@@ -30,7 +53,10 @@ const app = new Vue ({
         AddToDo:function(){
             const trimWhatToDo = this.whatToDo.trim();
             if(trimWhatToDo.length > 3){
-                this.todo.push(trimWhatToDo);
+                this.todo.push({
+                    text:trimWhatToDo,
+                    done:false
+                    });
                 this.whatToDo='';  
             }  
         },

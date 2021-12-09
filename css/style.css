@@ -90,3 +90,8 @@ ul{
 span{
     cursor: pointer;
 }
+
+.is-done{
+    text-decoration: line-through red;
+    
+}
