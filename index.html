@@ -32,7 +32,12 @@
                 <div class="list-of-items">
                     <ul>
                         <li  
-                            v-for="(element,index) in todo"  :class="{'is-done':todo.done}">{{element.text}}<span @click="clearToDo(index)"><i class="fas fa-trash-alt"></i></span>
+                            v-for="(element,index) in todo"
+                            @click="toggle(index)"  
+                            :class="{'is-done':element.done }">
+                            {{element.text}}
+                            
+                            <span @click="clearToDo(index)"><i class="fas fa-trash-alt"></i></span>
                         </li>
                       
                     </ul>

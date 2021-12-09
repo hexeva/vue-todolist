@@ -45,6 +45,7 @@ const app = new Vue ({
             },  
         ],
         whatToDo:'',
+        
 
     },
     // end data
@@ -63,6 +64,9 @@ const app = new Vue ({
         clearToDo:function(index){
             this.todo.splice(index,1);
         },
+        toggle:function(index){
+            this.todo[index].done = !this.todo[index].done;
+        }
 
     }
     // end methods
