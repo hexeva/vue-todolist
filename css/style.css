@@ -12,7 +12,7 @@
     padding: 20px;
    
     height: 100%;
-    background-color: aquamarine;
+    
 
 }
 
@@ -23,7 +23,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: azure;
+    
 }
 main{
     width: 100%;
@@ -84,6 +84,7 @@ ul{
     display: flex;
     justify-content: space-between;
     cursor: pointer;
+    margin: 10px 0;
 }
 
 span{

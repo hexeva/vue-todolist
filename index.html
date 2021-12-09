@@ -24,24 +24,16 @@
             <main>
                 <!-- input -->
                 <div class="input-container">
-                    <input class="todo" type="text" placeholder="what to do">
+                    <input v-model="whatToDo" class="todo" type="text" placeholder="what to do">
                     <button class="push">PUSH</button>
                 </div>
                 <!-- end input -->
                 <!-- items -->
                 <div class="list-of-items">
                     <ul>
-                        <li>ciao come stai 
-                            <span><i class="fas fa-trash-alt"></i></span>
-                        </li>
-                        <li>ciao</li>
-                        <li>ciao</li>
-                        <li>ciao</li>
-                        <li>ciao</li>
-                        <li>ciao</li>
-                        <li>ciao</li>
-                        <li>ciao</li>
-                        <li>ciao</li>
+                        <li> {{whatToDo}} <span><i class="fas fa-trash-alt"></i></span></li>
+                      
+                        
 
                     </ul>
                 </div>

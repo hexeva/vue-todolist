@@ -12,6 +12,17 @@ Vue.config.devtools = true;
 
 const app = new Vue ({
     el:'#root',
-    data:{},
+    data:{
+        todo:[
+            {
+                text:'',
+                done:false
+            },
+        ],
+        whatToDo:'',
+
+    },
+    // end data
+
     methods:{}
 });
