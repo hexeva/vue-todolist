@@ -14,15 +14,31 @@ const app = new Vue ({
     el:'#root',
     data:{
         todo:[
-            {
-                text:'',
-                done:false
-            },
+            'fare la spesa',
+            'comprare il caffè',
+            'aiutare la nonna',
+            'buttare la zozzeria',
+            
+            
         ],
         whatToDo:'',
 
     },
     // end data
 
-    methods:{}
+    methods:{
+        AddToDo:function(){
+            const trimWhatToDo = this.whatToDo.trim();
+            if(trimWhatToDo.length > 3){
+                this.todo.push(trimWhatToDo);
+                this.whatToDo='';  
+            }  
+        },
+        clearToDo:function(index){
+            this.todo.splice(index,1);
+        },
+
+    }
+    // end methods
 });
+// end root

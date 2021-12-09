@@ -24,17 +24,15 @@
             <main>
                 <!-- input -->
                 <div class="input-container">
-                    <input v-model="whatToDo" class="todo" type="text" placeholder="what to do">
-                    <button class="push">PUSH</button>
+                    <input @keyup.enter="AddToDo" v-model="whatToDo" class="todo" type="text" placeholder="what to do">
+                    <button @click="AddToDo" class="push">PUSH</button>
                 </div>
                 <!-- end input -->
                 <!-- items -->
                 <div class="list-of-items">
                     <ul>
-                        <li> {{whatToDo}} <span><i class="fas fa-trash-alt"></i></span></li>
+                        <li v-for="(element,index) in todo">{{element}}<span @click="clearToDo(index)"><i class="fas fa-trash-alt"></i></span></li>
                       
-                        
-
                     </ul>
                 </div>
                 <!-- end items -->
